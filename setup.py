@@ -40,12 +40,6 @@ with open("dev-requirements.txt") as dev_requirements:
     dev_requires = dev_requirements.readlines()
 
 # The test suite uses network namespaces
-# nomenclature can only be installed on Linux
-if platform.system() == 'Linux':
-    dev_requires.extend([
-        "nomenclature >= 0.1.0",
-    ])
-
 setup(
     # This is the human-targetted name of the software being packaged.
     name="Flocker",
