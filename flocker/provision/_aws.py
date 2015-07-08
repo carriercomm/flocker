@@ -80,9 +80,8 @@ def provision_aws(node, package_source, distribution, variants):
 
 
 IMAGE_NAMES = {
-    'centos-7': 'CentOS 7 x86_64 (2014_09_29) EBS HVM'
-                '-b7ee8a69-ee97-4a49-9e68-afaee216db2e-ami-d2a117ba.2',
-    'ubuntu-14.04': 'ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-20150325',  # noqa
+    'centos-7': 'acceptance-centos-7/20150708.214800',
+    'ubuntu-14.04': 'acceptance-ubuntu-14.04/20150708.225728',
     'ubuntu-15.04': 'ubuntu/images/hvm-ssd/ubuntu-vivid-15.04-amd64-server-20150422',  # noqa
 }
 
