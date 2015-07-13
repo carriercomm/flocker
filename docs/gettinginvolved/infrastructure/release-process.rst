@@ -21,13 +21,13 @@ By the end of the release process we will have:
 - Ubuntu 14.04 DEBs for software on the node and client,
 - Ubuntu 15.04 DEBs for software on the node and client,
 - a Vagrant base tutorial image,
-- documentation on `docs.clusterhq.com <https://docs.clusterhq.com>`_, and
+- documentation on `docs.clusterhq.com <https://docs.clusterhq.com/>`_, and
 - an updated Homebrew recipe.
 
 For a maintenance or documentation release, we will have:
 
 - a tag in version control,
-- documentation on `docs.clusterhq.com <https://docs.clusterhq.com>`_.
+- documentation on `docs.clusterhq.com <https://docs.clusterhq.com/>`_.
 
 
 Prerequisites
@@ -45,7 +45,7 @@ Software
 
      vagrant plugin install vagrant-scp
 
-.. _`Vagrant`: https://docs.vagrantup.com/
+.. _`Vagrant`: https://docs.vagrantup.com/v2/
 .. _`VirtualBox`: https://www.virtualbox.org/
 
 Access
@@ -56,7 +56,7 @@ Access
 
 - SSH access to ClusterHQ's GitHub repositories.
 
-- The ability to create issues in `the ClusterHQ JIRA <https://clusterhq.atlassian.net>`_.
+- The ability to create issues in `the ClusterHQ JIRA <https://clusterhq.atlassian.net/secure/Dashboard.jspa>`_.
 
 .. _preparing-for-a-release:
 
@@ -120,7 +120,7 @@ Preparing For a Release
       git clone git@github.com:ClusterHQ/flocker.git
       cd flocker
       mkvirtualenv flocker-release
-      pip install --editable .[release]
+      pip install --editable .[dev]
       admin/create-release-branch --flocker-version="${VERSION}"
 
 #. Ensure the release notes in :file:`NEWS` are up-to-date:
