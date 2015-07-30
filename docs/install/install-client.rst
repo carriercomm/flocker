@@ -27,28 +27,33 @@ The following sections describe how to install the Flocker client on your platfo
    :backlinks: none
    :depth: 2
 
-.. _installing-flocker-cli-ubuntu-15.04:
+On Ubuntu
+=========
 
-Ubuntu 15.04
-============
+.. tabs::
 
-On Ubuntu 15.04, the Flocker CLI can be installed from the ClusterHQ repository:
+   .. _installing-flocker-cli-ubuntu-15.04:
 
-.. task:: install_cli ubuntu-15.04
-   :prompt: alice@mercury:~$
+   Ubuntu 15.04
+   ------------
 
-.. _installing-flocker-cli-ubuntu-14.04:
+   On Ubuntu 15.04, the Flocker CLI can be installed from the ClusterHQ repository:
 
-Ubuntu 14.04
-============
+   .. task:: install_cli ubuntu-15.04
+      :prompt: alice@mercury:~$
 
-On Ubuntu 14.04, the Flocker CLI can be installed from the ClusterHQ repository:
+   .. _installing-flocker-cli-ubuntu-14.04:
 
-.. task:: install_cli ubuntu-14.04
-   :prompt: alice@mercury:~$
+   Ubuntu 14.04
+   ------------
 
-Other Linux Distributions
-=========================
+   On Ubuntu 14.04, the Flocker CLI can be installed from the ClusterHQ repository:
+
+   .. task:: install_cli ubuntu-14.04
+      :prompt: alice@mercury:~$
+
+On Other Linux Distributions
+============================
 
 .. warning::
 
@@ -102,8 +107,8 @@ You'll need to do this every time you start a new shell.
    |latest-installable|
    alice@mercury:~/flocker-tutorial$
 
-OS X
-====
+On OS X
+=======
 
 Install the `Homebrew`_ package manager.
 
