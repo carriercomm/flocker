@@ -27,6 +27,8 @@ The following sections describe how to install the Flocker client on your platfo
    :backlinks: none
    :depth: 2
 
+.. _installing-flocker-cli-ubuntu:
+
 On Ubuntu
 =========
 
