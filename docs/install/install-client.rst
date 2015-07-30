@@ -32,8 +32,6 @@ On Ubuntu
 
 .. tabs::
 
-   .. _installing-flocker-cli-ubuntu-15.04:
-
    Ubuntu 15.04
    ------------
 
@@ -41,8 +39,6 @@ On Ubuntu
 
    .. task:: install_cli ubuntu-15.04
       :prompt: alice@mercury:~$
-
-   .. _installing-flocker-cli-ubuntu-14.04:
 
    Ubuntu 14.04
    ------------
