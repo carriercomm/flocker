@@ -443,7 +443,7 @@ class GenericDockerClientTests(TestCase):
         # it's old, and isn't used by other tests.  Note, this is the
         # same image as test_pull_image_if_necessary, but they run at
         # different times.
-        image = u"busybox:ubuntu-12.04"
+        image = u"phusion/baseimage:0.9.0"
         # Make sure image is gone:
         docker = Client()
         try:
