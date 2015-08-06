@@ -92,7 +92,7 @@ common_cli:
 
   run_acceptance_tests: &run_acceptance_tests |
     # we gather the return code, but make sure we come out of these tests with '0'
-    /tmp/v/bin/python admin/run-acceptance-tests --distribution centos-7 --provider aws --dataset-backend aws --branch \${TRIGGERED_BRANCH} --build-server  http://\$(wget -qO- http://instance-data/latest/meta-data/public-ipv4)  --config-file /tmp/acceptance.yaml \${ACCEPTANCE_TEST_MODULE} ; RC=\$?
+    /tmp/v/bin/python admin/run-acceptance-tests --distribution \${DISTRIBUTION_NAME} --provider aws --dataset-backend aws --branch \${TRIGGERED_BRANCH} --build-server  http://\$(wget -qO- http://instance-data/latest/meta-data/public-ipv4)  --config-file /tmp/acceptance.yaml \${ACCEPTANCE_TEST_MODULE} ; RC=\$?
 
   disable_selinux: &disable_selinux |
     sudo setenforce 0
