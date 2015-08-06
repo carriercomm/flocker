@@ -302,6 +302,74 @@ job_type:
                    *exit_with_return_code_from_test ]
           }
       clean_repo: true
+    run_acceptance_end_to_end_dataset_on_AWS_Ubuntu_Trusty:
+      on_nodes_with_labels: 'aws-ubuntu-trusty-M3Medium'
+      with_steps:
+        - { type: 'shell',
+            cli: [ *hashbang, *setup_pip_cache,
+                   *cleanup, *setup_venv, *setup_flocker_modules,
+                   *setup_aws_env_vars, *check_version,
+                   'export DISTRIBUTION_NAME=ubuntu-14.04',
+                   *build_sdist, *build_package,
+                   *build_repo_metadata,
+                   *setup_authentication,
+                   'export ACCEPTANCE_TEST_MODULE=flocker.acceptance.endtoend.test_dataset',
+                   *run_acceptance_tests,
+                   *clean_packages,
+                   *exit_with_return_code_from_test ]
+          }
+      clean_repo: true
+    run_acceptance_integration_mongodb_on_AWS_Ubuntu_Trusty:
+      on_nodes_with_labels: 'aws-ubuntu-trusty-M3Medium'
+      with_steps:
+        - { type: 'shell',
+            cli: [ *hashbang, *setup_pip_cache,
+                   *cleanup, *setup_venv, *setup_flocker_modules,
+                   *setup_aws_env_vars, *check_version,
+                   'export DISTRIBUTION_NAME=ubuntu-14.04',
+                   *build_sdist, *build_package,
+                   *build_repo_metadata,
+                   *setup_authentication,
+                   'export ACCEPTANCE_TEST_MODULE=flocker.acceptance.integration.test_mongodb',
+                   *run_acceptance_tests,
+                   *clean_packages,
+                   *exit_with_return_code_from_test ]
+          }
+      clean_repo: true
+    run_acceptance_integration_postgres_on_AWS_Ubuntu_Trusty:
+      on_nodes_with_labels: 'aws-ubuntu-trusty-M3Medium'
+      with_steps:
+        - { type: 'shell',
+            cli: [ *hashbang, *setup_pip_cache,
+                   *cleanup, *setup_venv, *setup_flocker_modules,
+                   *setup_aws_env_vars, *check_version,
+                   'export DISTRIBUTION_NAME=ubuntu-14.04',
+                   *build_sdist, *build_package,
+                   *build_repo_metadata,
+                   *setup_authentication,
+                   'export ACCEPTANCE_TEST_MODULE=flocker.acceptance.integration.test_postgres',
+                   *run_acceptance_tests,
+                   *clean_packages,
+                   *exit_with_return_code_from_test ]
+          }
+      clean_repo: true
+    run_acceptance_obsolete_cli_on_AWS_Ubuntu_Trusty:
+      on_nodes_with_labels: 'aws-ubuntu-trusty-M3Medium'
+      with_steps:
+        - { type: 'shell',
+            cli: [ *hashbang, *setup_pip_cache,
+                   *cleanup, *setup_venv, *setup_flocker_modules,
+                   *setup_aws_env_vars, *check_version,
+                   'export DISTRIBUTION_NAME=ubuntu-14.04',
+                   *build_sdist, *build_package,
+                   *build_repo_metadata,
+                   *setup_authentication,
+                   'export ACCEPTANCE_TEST_MODULE=flocker.acceptance.obsolete.test_cli',
+                   *run_acceptance_tests,
+                   *clean_packages,
+                   *exit_with_return_code_from_test ]
+          }
+      clean_repo: true
     run_acceptance_obsolete_containers_on_AWS_Ubuntu_Trusty:
       on_nodes_with_labels: 'aws-ubuntu-trusty-M3Medium'
       with_steps:
