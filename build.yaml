@@ -233,6 +233,7 @@ job_type:
                    *clean_packages,
                    *exit_with_return_code_from_test ]
           }
+      clean_repo: true
     run_acceptance_integration_mongodb_on_AWS_CentOS_7:
       on_nodes_with_labels: 'aws-centos-7-M3Medium'
       with_steps:
@@ -249,6 +250,7 @@ job_type:
                    *clean_packages,
                    *exit_with_return_code_from_test ]
           }
+      clean_repo: true
     run_acceptance_integration_postgres_on_AWS_CentOS_7:
       on_nodes_with_labels: 'aws-centos-7-M3Medium'
       with_steps:
@@ -265,6 +267,7 @@ job_type:
                    *clean_packages,
                    *exit_with_return_code_from_test ]
           }
+      clean_repo: true
     run_acceptance_obsolete_cli_on_AWS_CentOS_7:
       on_nodes_with_labels: 'aws-centos-7-M3Medium'
       with_steps:
@@ -281,6 +284,7 @@ job_type:
                    *clean_packages,
                    *exit_with_return_code_from_test ]
           }
+      clean_repo: true
     run_acceptance_obsolete_containers_on_AWS_CentOS_7:
       on_nodes_with_labels: 'aws-centos-7-M3Medium'
       with_steps:
@@ -297,6 +301,7 @@ job_type:
                    *clean_packages,
                    *exit_with_return_code_from_test ]
           }
+      clean_repo: true
     run_acceptance_obsolete_containers_on_AWS_Ubuntu_Trusty:
       on_nodes_with_labels: 'aws-ubuntu-trusty-M3Medium'
       with_steps:
@@ -313,4 +318,4 @@ job_type:
                    *clean_packages,
                    *exit_with_return_code_from_test ]
           }
-
+      clean_repo: true
