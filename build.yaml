@@ -110,8 +110,6 @@ common_cli:
       # the acceptance tests look for a package in a yum repository,
       # we provide one by starting a webserver and pointing the tests
       # to look over there
-      sudo yum install -y nginx
-      sudo service nginx start
       sudo rm -rf /usr/share/nginx/html/results/omnibus/\${TRIGGERED_BRANCH}/\${DISTRIBUTION_NAME}
       sudo mkdir -p /usr/share/nginx/html/results/omnibus/\${TRIGGERED_BRANCH}/\${DISTRIBUTION_NAME}
       sudo cp repo/* /usr/share/nginx/html/results/omnibus/\${TRIGGERED_BRANCH}/\${DISTRIBUTION_NAME}
