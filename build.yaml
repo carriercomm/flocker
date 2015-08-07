@@ -13,6 +13,7 @@ common_cli:
     #!/bin/bash
     set -x
     set -e
+    sudo chmod 777 /var/run/docker.sock
 
   cleanup: &cleanup |
     export PATH=/usr/local/bin:$PATH
